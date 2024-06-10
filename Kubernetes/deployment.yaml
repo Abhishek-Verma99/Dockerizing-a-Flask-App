@@ -1,23 +1,23 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: youtube-clone-app
+  name: simple-flask-app:latest
   labels:
-    app: youtube-clone-app
+    app: simple-flask-app:latest
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: youtube-clone-app
+      app: simple-flask-app:latest
   template:
     metadata:
       labels:
-        app: youtube-clone-app
+        app: simple-flask-app:latest
     spec:
       terminationGracePeriodSeconds: 30
       containers:
-      - name: youtube-clone-app
-        image: ashfaque9x/youtube-clone:latest
+      - name: simple-flask-app:latest
+        image: abhishekverma14/simple-flask-app:latest
         imagePullPolicy: "Always"
         ports:
-        - containerPort: 3000
+        - containerPort: 5000
