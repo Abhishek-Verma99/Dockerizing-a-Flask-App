@@ -1,6 +1,6 @@
 version: "3"
 services:
   web:
-    image: python-app
+    image: simple-flask-app:latest
     ports:
       - "5000:5000"
