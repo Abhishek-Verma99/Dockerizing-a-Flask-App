@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: simple-flask-app:latest
+  name: simple-flask-app
   labels:
-    app: simple-flask-app:latest
+    app: simple-flask-app
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: simple-flask-app:latest
+      app: simple-flask-app
   template:
     metadata:
       labels:
-        app: simple-flask-app:latest
+        app: simple-flask-app
     spec:
       terminationGracePeriodSeconds: 30
       containers:
-      - name: simple-flask-app:latest
+      - name: simple-flask-app
         image: abhishekverma14/simple-flask-app:latest
         imagePullPolicy: "Always"
         ports:
