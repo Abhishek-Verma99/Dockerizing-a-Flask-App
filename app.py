@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def hello():
-    return "Welcome to Python Flask Application - Dockerizing a Flask app"
+    return "Welcome to Python Flask Application - Building a flask app using AWS Codepipeline, AWS codebiuld and Codedeploy"
 
 
 if __name__ == "__main__":
